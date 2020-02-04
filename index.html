@@ -9,32 +9,146 @@
 </head>
 
 <body>
-   <script>
-        console.log("*********PetShop da RD**********")
-        
-        var cachorro = {
-            nome: "Thor" ,
+    <script>
+        const EMPRESA = "*********PetShop da RD**********"
+
+        let cachorro = {
+            nome: "Thor",
             idade: 6,
             raca: "Pastor Alemão",
             peso: 45.8,
             cor: "Capa Preta",
-            dono: {nome:"Beatriz",
-                   idade: 19,
+            dono: {
+                nome: "Beatriz",
+                idade: 19,
             },
             vacinado: false,
             serviços: ["Banho", "Vacina"]
 
         }
-        function vacinar(cachorro){
-               if (cachorro.vacinado){
-                   console.log("Já está Vacinado");
-                   vacina:true 
-               }else{
-                   cachorro.vacinado = true
-                   console.log ("Vacina aplicada")
-               }
+        let pets = [{ nome: "AMANDA" }, { idade: 3 }, { raca: "pitbull" }, { peso: 32 },{vacinado:false},
+
+        { nome: "NANA" }, { idade: 5 }, { raca: "Pastor" }, { peso: 7 }, {vacinado:true},
+        { nome: "NAYARA" }, { idade: 1 }, { raca: "Par" }, { peso: 6 }, {vacinado:true}];
+
+         let gato = [{
+              nome= "moana",
+              idade = 14,
+              cor = "branca",
+              tipo = "Gato",
+              vacinado= false
+  
+          }, {
+              nome= "havana",
+              idade = 14,
+              cor = "preto",
+              tipo = "Gato",
+              vacinado= false
+  
+          },
+          {
+              nome= "novara",
+              idade = 10,
+              cor = "marrom",
+              tipo = "Gato",
+              vacinado= false
+  
+          }]
+
+
+        const vacinado = cachorro => cachorro;
+        if (cachorro.vacinado) {
+            console.log("Já está Vacinado");
+            vacina: true
+        } else {
+            cachorro.vacinado = true
+            console.log("Vacina aplicada")
         }
-   </script>    
+
+
+
+        const adicionarPet = (nome, idade, raca, peso) => {
+            pets.push(cachorroNovo);
+            console.log("Pet adicionado com sucesso!");
+
+            return pets;
+        }
+
+        /*{
+             let cachorroNovo = {nome, idade, raca, peso} ;
+             pets.push(cachorroNovo);
+             console.log("Pet adicionado com sucesso!");
+             return pets;
+             
+        }
+
+       /* function mostrarPets(){
+          
+           pets.forEach(){
+            console.log ("-------------------------");   
+            console.log("Nome do pet: "+ pets[i].nome);
+            console.log("Raca do pet: "+ pets[i].raca);
+            
+           } 
+        } */
+
+        function mostrarPets() {
+
+            pets.forEach(function (valor, index) {
+                console.log("Nome do pet: " + valor.nome);
+                console.log("Raca do pet: " + valor.raca);
+            });
+
+
+            let frutas = ["maça", "banana", "pera"];
+            function exibir() {
+                frutas.forEach(valor, index)
+                console.log(valor);
+            }
+        }
+        const filtrarPetsGatos = () => {
+            let petsTipoGato = [];
+
+            pets.forEach((pet, index) => {
+                if (pet.tipo == "Gato") {
+                    petsTipoGato.push(pet);
+                }
+
+            });
+            return petsTipoGato;
+
+        }
+
+        const filtrarPetsGatos = () => {
+           let listaPetsGatos = pets.filter(function(pet,index){
+               return pet.tipo == "Gato";
+           })
+
+        }
+
+        const vacinarTodos = () =>{
+
+            gato.map(function(nome,index) =>{
+             //  vacinar(gato)
+                return gato.vacinado = true;
+            }
+            
+
+
+        
+
+     /*   let petsTipoGato = [];
+
+        pets.forEach((pet, index) => {
+            if (pet.tipo == "Gato") {
+                petsTipoGato.push(pet);
+            }
+
+        });*/
+
+
+
+    </script>
 </body>
 
 </html>
